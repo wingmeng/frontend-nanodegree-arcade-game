@@ -1,20 +1,23 @@
-# Classic Arcade Game Clone Project
 
-## Table of Contents
+# 前端纳米学位街机游戏项目 —— Frogger
+================================
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+> @Wing Meng
 
-## Instructions
+1. ## 游戏简介
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+	玩家通过控制游戏中的人物移动，避开敌人（甲虫）和障碍物（岩石），抵达水域。
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+2. ## 如何运行项目？
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+	将整个项目下载或 clone 到本地，双击运行其中的 `index.html` 文件，或使用浏览器打开该文件即可启动游戏。
+	
+	请使用现代主流浏览器来运行项目，例如：Chrome、Firefox 等。
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+3. ## 游戏攻略
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+	- 使用键盘方向键（上、下、左、右）来控制游戏人物移动；
+	- 岩石会阻挡人物移动，请绕行；
+	- 不要碰到甲虫，否则人物生命(Life)-1，且会回到出发点重新开始；
+	- 每顺利抵达水域一次，积分(Score)会+1，然后人物回到出发点开始下一轮；
+	- 人物初始生命为3，当游戏人物生命降为0时，游戏结束，当前积分清零，按键盘 `Enter` 键可重新开始游戏。
