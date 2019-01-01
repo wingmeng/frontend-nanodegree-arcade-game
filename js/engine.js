@@ -152,17 +152,20 @@ var Engine = (function(global) {
 
             // 总分信息
 			var text = (function() {
-				var ns = 'Frogger_bestRecord';
-				var bestRecord = localStorage.getItem(ns);
-
-				if (bestRecord) {
-					if (player.score > parseInt(bestRecord, 10)) {
-						localStorage.setItem(ns, player.score);
-						return '「new record!」';
-					}
-				} else {
-					localStorage.setItem(ns, player.score);
-				}
+                var ns = 'Frogger_bestRecord';
+                
+                if (window.localStorage) {
+                    var bestRecord = localStorage.getItem(ns);
+                    
+                    if (bestRecord) {
+                        if (player.score > parseInt(bestRecord, 10)) {
+                            localStorage.setItem(ns, player.score);
+                            return '「new record!」';
+                        }
+                    } else {
+                        localStorage.setItem(ns, player.score);
+                    }
+                }
 
 				return '';
 			})();

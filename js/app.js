@@ -1,3 +1,5 @@
+"use strict";
+
 // 游戏图片资源列表
 // 用以管理游戏图片素材
 var imgAsset = {
@@ -145,8 +147,10 @@ Player.prototype.count = function() {
     ctx.fillStyle = '#333';
 
     // 统计文案
-    var text = 'Score:' + this.score +
-        '\u3000\u3000' +  // 两个全角空格
+    var space = '\u3000\u3000';  // 间距：两个全角空格
+    var bestRecord = localStorage.getItem('Frogger_bestRecord');
+    var text = (bestRecord ? 'HI:' + bestRecord : '') + space +
+        'Score:' + this.score + space +
         'Life:' + this.life;
 
     ctx.fillText(text, ctx.canvas.width, height);
